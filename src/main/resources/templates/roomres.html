@@ -1,0 +1,27 @@
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+Hello Spring
+</head>
+
+<body>
+<h1>
+    Welcome to Res page
+</h1>
+
+<table>
+    <tr>
+        <th>room</th>
+        <th>Room Number</th>
+        <th>Guest</th>
+    </tr>
+    <tr th:each="roomReservations : ${roomReservations}">
+            <td th:text= "${roomReservations.roomName}">Room Name</td>
+            <td th:text= "${roomReservations.roomNumber}">Room Number</td>
+            <td th:text= "${roomReservations.lastName}!= null ?${roomReservations.lastName}
+            + ',' + ${roomReservations.firstName} : 'VACANT'">Room Name</td>
+    </tr>
+</table>
+
+</body>
+</html>
